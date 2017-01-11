@@ -13,13 +13,27 @@
 </head>
 
 <body>
+
 <div class="container">
   <h1>Hello, world!</h1>
 
-  <p>Content</p>
+  <div id="app-7">
+    <ol>
+      <!-- Now we provide each todo-item with the todo object    -->
+      <!-- it's representing, so that its content can be dynamic -->
+      <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+    </ol>
+  </div>
+
+  <div id="example">
+    <input v-model="message">
+    <p>Original message: "{{ message }}"</p>
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
+  </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="js/client.js"></script>
 </body>
